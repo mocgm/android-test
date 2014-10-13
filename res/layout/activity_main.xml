@@ -6,11 +6,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android.gitandroidhelloworld.MainActivity" >
+    tools:context="com.android.chronometer.MainActivity" >
 
-    <TextView
+    <Chronometer
+        android:id="@+id/chronometer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="61dp"
+        android:text="@string/cronometro"
+        android:textSize="@dimen/size" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:onClick="stop"
+        android:text="@string/strStop" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chronometer1"
+        android:layout_marginRight="51dp"
+        android:layout_marginTop="37dp"
+        android:layout_toLeftOf="@+id/button2"
+        android:onClick="start"
+        android:text="@string/strStart" />
 
 </RelativeLayout>

@@ -1,16 +1,26 @@
-package com.android.gitandroidhelloworld;
+package com.android.chronometer;
+
+import com.android.gitandroidhelloworld.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Chronometer;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+	private Chronometer chronometer;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		chronometer = (Chronometer) findViewById(R.id.chronometer1);
 	}
 
 	@Override
@@ -30,5 +40,16 @@ public class MainActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void start(View v) {
+		chronometer.setBase(SystemClock.elapsedRealtime());
+		chronometer.start();		
+		Toast.makeText(getApplicationContext(), "Started", Toast.LENGTH_SHORT).show();	
+	}
+	
+	public void stop(View v) {
+		chronometer.stop();		
+		Toast.makeText(getApplicationContext(), "Stopped", Toast.LENGTH_SHORT).show();	
 	}
 }

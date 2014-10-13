@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">GitAndroidHelloWorld</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="cronometro">Cronômetro</string>
+    <string name="action_settings">Settings</string>    
+    <string name="strStart">Start</string>
+    <string name="strStop">Stop</string>
 
 </resources>
